@@ -5,6 +5,7 @@
  */
 package org.rationalarithmetic;
 import java.util.*;
+import org.rationalarithmetic.Rational;
 
 /**
  * 
@@ -14,7 +15,6 @@ import java.util.*;
 public class RandomBinOpBenchmark {
     static final int N = 100000000;
     static final int M = 100;
-    enum OpCode { ADD, MEDIANT, MUL, DIV, FP_ADD, FP_MUL, FP_DIV };
 
     void doOperations(int N, OpCode opcode, boolean verbose) {
         long start, end;

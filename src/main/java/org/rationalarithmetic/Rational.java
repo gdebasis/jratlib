@@ -5,7 +5,6 @@
  */
 package org.rationalarithmetic;
 
-import java.util.Comparator;
 import java.util.Random;
 
 /**
@@ -13,8 +12,8 @@ import java.util.Random;
  * @author dganguly
  */
 public class Rational {
-    int num;
-    int denom;
+    public int num;
+    public int denom;
     
     public static Rational opResult = new Rational();
     public static float opResult_f;
