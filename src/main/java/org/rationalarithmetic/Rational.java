@@ -43,6 +43,10 @@ public class Rational {
         opResult.denom = this.denom + that.denom;
     }
     
+    static public Rational mediant(Rational a, Rational b) {
+        return new Rational(a.num + b.num, a.denom + b.denom);
+    }
+    
     public void mul(Rational that) {
         opResult.num = this.num*that.num;
         opResult.denom = this.denom*that.denom;

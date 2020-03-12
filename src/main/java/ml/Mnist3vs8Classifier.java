@@ -38,8 +38,8 @@ public class Mnist3vs8Classifier {
             RealValuedVec[] testData = get3And8s(MnistToDataInstances.loadMnist());
             
             BinaryLogisticRegression lr = new BinaryLogisticRegression(trainData, testData, LEARNING_MOMENTUM);
-            lr.runBGDEpochs(BATCH_SIZE, EPOCHS);
-            //lr.runSGDEpochs(EPOCHS);
+            //lr.runBGDEpochs(BATCH_SIZE, EPOCHS);
+            lr.runSGDEpochs(EPOCHS);
             
             lr.evaluate();
         }
