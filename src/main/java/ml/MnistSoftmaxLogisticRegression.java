@@ -11,7 +11,8 @@ import mnist.MnistToDataInstances;
  *
  * @author debforit
  */
-public class MnistLogisticRegression {
+public class MnistSoftmaxLogisticRegression {
+    static final float LEARNING_MOMENTUM = 0.1f;
     static final int EPOCHS = 5;
     static final int BATCH_SIZE = 1000;
     
@@ -22,7 +23,7 @@ public class MnistLogisticRegression {
             
             RealValuedVec[] testData = MnistToDataInstances.loadMnist();
             
-            LogisticRegression lr = new LogisticRegression(trainData, testData, 10);
+            SoftmaxLogisticRegression lr = new SoftmaxLogisticRegression(trainData, testData, 10, LEARNING_MOMENTUM);
             lr.runBGDEpochs(BATCH_SIZE, EPOCHS);
             //lr.runSGDEpochs(EPOCHS);
             
